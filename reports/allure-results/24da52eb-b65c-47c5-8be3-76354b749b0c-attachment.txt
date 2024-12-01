@@ -1,0 +1,1 @@
+[1m[31mERROR   [0m root:test_get_all_user_list.py:20 Error while fetching list of users -'int' object has no attribute 'status_code'

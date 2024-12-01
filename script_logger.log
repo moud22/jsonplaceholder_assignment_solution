@@ -1,0 +1,1 @@
+2024-12-02 01:25:13,999 - root - ERROR - Error while fetching list of users -'int' object has no attribute 'status_code'

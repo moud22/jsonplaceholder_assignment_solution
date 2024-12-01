@@ -1,0 +1,11 @@
+[ {
+  "uid" : "f088ccf166bc69f",
+  "name" : "test_get_comments_of_valid_post",
+  "time" : {
+    "start" : 1733080426240,
+    "stop" : 1733080426685,
+    "duration" : 445
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

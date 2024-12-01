@@ -1,6 +1,7 @@
+### JSON Placeholder Assignment solution
+A comprehensive automation testing framework designed for the JSONPlaceholder API, showcasing advanced techniques with pytest for Users, Posts, and Comments modules. This framework integrates modular test structures, dynamic data handling, and interactive reporting tools like Allure and pytest-html, making it a robust solution for scalable API testing.
+
 ### Clone Project
-
-
 
 ### Steps to run the test script
 
@@ -15,6 +16,21 @@
 
 4. Run the script using PyTest
 ```python3 -m pytest -s```
+
+### Steps to generate and see the test script reports using allure
+
+1. Finish the steps of running the project
+```python3 -m pytest -s```
+
+2. Run Allure generate command
+```allure generate reports/allure-results -o reports/allure-report --clean```
+
+3. Run the below allure command to view the report
+```allure open reports/allure-report```
+
+4. After the above comment has run, allure will create a server for displaying the report, copy the link and open it in any of your browser
+```example link : http://127.0.1.1:43571/```
+```Important note : the generated http link will be active until it's active, so in order to close the report, please enter ctrl+c in terminal```
 
 ### Project Structure:
 - `common_utils/`: Contains all the API call methods required to run our modules, Posts, Users and Comments

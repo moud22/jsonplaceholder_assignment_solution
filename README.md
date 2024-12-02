@@ -34,17 +34,17 @@ A comprehensive automation testing framework designed for the JSONPlaceholder AP
 ```allure open reports/allure-report```
 
 4. After the above comment has run, allure will create a server for displaying the report, copy the link and open it in any of your browser
-```example link : http://127.0.1.1:43571/```
+```example link : http://127.0.1.1:43571/```\
 Important note : ```the generated http link will be active until it's active, so in order to close the report, please enter ctrl+c in terminal```
 
 ### Project Structure:
 - `common_utils/`: Contains all the API call methods required to run our modules, Posts, Users and Comments.
 - `config/`: Contains the base_url of our website(As of Now). We can keep this file for future use so that we can add all the header detils, authentication details, cookies etc.
 - `requirements.txt`: Lists the dependencies for the project.
-- `comments`/: contains all the endpoints of comment module, test cases and their respective fixture files.
-- `posts`/: contains all the endpoints of post module, test cases and their respective fixture files.
-- `users`/: contains all the endpoints of users module, test cases and their respective fixture files.
-- `fixtures`/: contains API endpoints operations (create, retrieve), multiple sets of data for testing(Data driven test approach).
-- `reports`/: contains all the report files which gets generated after running the automation script.
-- `pytest.ini`/: contains configurations of pytest, as of now, only allure reporting configurations has been added. This is a configuration file used by pytest to set global settings and behaviors for your test suite. It allows you to define options, plugins, markers, and other configurations in a central location, making your test suite easier to manage and customize.
-- `script_logger.log`/: contains log details.
+- `comments/`: contains all the endpoints of comment module, test cases and their respective fixture files.
+- `posts/`: contains all the endpoints of post module, test cases and their respective fixture files.
+- `users/`: contains all the endpoints of users module, test cases and their respective fixture files.
+- `fixtures/`: contains API endpoints operations (create, retrieve), multiple sets of data for testing(Data driven test approach).
+- `reports/`: contains all the report files which gets generated after running the automation script.
+- `pytest.ini`: contains configurations of pytest, as of now, only allure reporting configurations has been added. This is a configuration file used by pytest to set global settings and behaviors for your test suite. It allows you to define options, plugins, markers, and other configurations in a central location, making your test suite easier to manage and customize.
+- `script_logger.log`: contains log details.

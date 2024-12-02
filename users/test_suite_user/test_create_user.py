@@ -8,6 +8,9 @@ log = get_logger()
 
 
 def test_create_user(user_endpoint, user_data_fixture):
+    """
+    test case method for creating a new user
+    """
     try:
         for user_data in user_data_fixture:  # Iterate over user data in the fixture
             response = rest_apis.send_post_request(

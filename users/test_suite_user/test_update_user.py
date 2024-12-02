@@ -7,14 +7,14 @@ log = get_logger()
 
 def test_update_user(user_endpoint, update_user_data_fixture):
     """
-    Iterate over the user data and update each user using the data
+    test case method for updating the existing user data
     """
     try:
         user_id = 1  # Example user ID, you can modify it as needed or dynamically retrieve IDs
 
         for update_data in update_user_data_fixture:  # Iterate over each set of update data
             response = rest_apis.send_update_request(
-                user_endpoint.update_single_user.value,  # 'users/{id}/' is fetched from the enum
+                user_endpoint.update_single_user.value, 
                 update_data,
                 user_id
             )

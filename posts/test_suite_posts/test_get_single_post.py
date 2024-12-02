@@ -5,6 +5,9 @@ from posts.posts_endpoint import PostEndPoints
 log = get_logger()
 
 def test_get_single_post_valid_id():
+    """
+    test case method to get single post with valid id
+    """
     try:
         post_response = rest_apis.send_get_request_with_id(PostEndPoints.get_single_post.value, id=2) # here id is post_id
         response_code = post_response.status_code
@@ -18,6 +21,9 @@ def test_get_single_post_valid_id():
         log.error(f"Error while validating single post id {str(e)}")
 
 def test_get_single_post_invalid_id():
+    """
+    test case method to get single post with invalid id
+    """
     try:
         post_response = rest_apis.send_get_request_with_id(PostEndPoints.get_single_post.value, id=2000) # here id is post_id
         response_code = post_response.status_code

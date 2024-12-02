@@ -16,7 +16,7 @@ def test_get_comments_of_valid_post():
 
         assert response_code == 200
         for comment in comment_list:
-            assert comment.get("postId"), "post_id key is not valid"
+            assert comment.get("postId"), "postId key is not valid"
             assert comment.get("id"), "id key is not valid"
             assert comment.get("name"), "title key is not valid"
             assert comment.get("email"), "email key is not valid"

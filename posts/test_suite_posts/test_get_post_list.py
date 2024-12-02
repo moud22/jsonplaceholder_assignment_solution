@@ -5,12 +5,15 @@ from posts.posts_endpoint import PostEndPoints
 log = get_logger()
 
 def test_get_all_post_list():
+    """
+    test case method to get the list of all posts"""
     try:
         post_list_response = rest_apis.send_get_request(PostEndPoints.get_all_post.value)
         response_code = post_list_response.status_code
 
         post_list = post_list_response.json()
 
+        assert response_code == 200
         for post in post_list:
             assert post.get("userId"), "user_id key is not valid"
             assert post.get("id"), "id key is not valid"

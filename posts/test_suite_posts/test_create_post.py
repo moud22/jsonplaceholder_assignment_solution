@@ -9,14 +9,19 @@ from posts.test_suite_posts.fixtures.test_create_post_fixture import (
 log = get_logger()
 
 def test_create_post(post_endpoint: PostEndPoints, create_post_data_fixture):
+    """
+    test case for creating a new post
+    """
     try:
         for post_data in create_post_data_fixture:  # Iterate over post data
             response = rest_apis.send_post_request(
-                post_endpoint.create_post.value,  # 'posts/' endpoint
+                post_endpoint.create_post.value,
                 post_data
             )
 
-            # Verify the response status code and if the post was created successfully
+            """
+            Verify the response status code and if the post was created successfully
+            """
             assert response.status_code == 201, "Failed to create post"
             assert response.json().get("id"), "Post ID not returned in response"
     except Exception as e:

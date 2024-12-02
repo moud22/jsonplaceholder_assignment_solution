@@ -3,13 +3,16 @@ from comments.test_suite_comments.test_create_comment_fixture import comment_end
 from config.set_up import get_logger
 
 log = get_logger()
-# creating a comment for a valid post
+
 def test_create_comment_of_valid_post(comment_endpoint, create_comment_data_fixture):
+    """ 
+    creating a comment for a valid post 
+    """
     try:
         for comment_data in create_comment_data_fixture:  # Iterate over comment data
             response = rest_apis.send_post_request_comment(
                 comment_endpoint.create_comment.value,  # Endpoint for creating comments
-                postId=comment_data["postId"],  # Post ID from the payload
+                postId=comment_data["postId"],  # Post ID from the fixture file
                 payloads=comment_data
             )
 
